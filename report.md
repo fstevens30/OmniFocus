@@ -65,5 +65,5 @@ Documentation Manager / Testing
 # Design
 
 # Site map
-
+![Site Map](assets/SiteMap.png)
 # DFD
