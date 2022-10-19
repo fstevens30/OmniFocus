@@ -1,8 +1,8 @@
-## Software Requirement Specifications for
+Software Requirement Specifications for
 
 # OmniFocus
 
-## Version 1
+Version 1
 
 ### Prepared by Flynn Stevens
 
