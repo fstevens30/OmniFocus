@@ -62,8 +62,9 @@ Documentation Manager / Testing
 
 <a href="https://github.com/fstevens30"><img src="https://img.shields.io/badge/_Github-black?style=for-the-badge&logo=github&logoColor=white"></a>
 
+----------------------------------------
 # Design
 
-# Site map
+# Sitemap
 ![Site Map](assets/SiteMap.png)
 # DFD
