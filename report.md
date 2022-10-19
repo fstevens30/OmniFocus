@@ -36,14 +36,17 @@ The requirements for this web application are as follows:
 
 ## Keith Jhaeron Cayatoc (Team Leader)
 UI / UX Designer
+<a href="https://github.com/Yugenzariah"><img src="https://img.shields.io/badge/_Github-black?style=for-the-badge&logo=github&logoColor=white"></a>
 
 ## Tristan Bulmer 
 Back-end Engineer
+<a href="https://github.com/Transit-Lumber"><img src="https://img.shields.io/badge/_Github-black?style=for-the-badge&logo=github&logoColor=white"></a>
 
 ## Jackson Hayes
 Front-end Engineer
+<a href="https://github.com/JacksoonHayes"><img src="https://img.shields.io/badge/_Github-black?style=for-the-badge&logo=github&logoColor=white"></a>
 
 ## Flynn Stevens
 Documentation Manager / Testing
-
+<a href="https://github.com/fstevens30"><img src="https://img.shields.io/badge/_Github-black?style=for-the-badge&logo=github&logoColor=white"></a>
 # Design
