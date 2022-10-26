@@ -1,0 +1,10 @@
+#profile-box {
+    text-align: center;
+}
+
+.profile ul {
+    list-style: none;
+    text-decoration: none;
+    line-height: 1;
+    padding: 20px 0;
+}

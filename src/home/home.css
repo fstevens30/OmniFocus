@@ -1,19 +1,17 @@
-body {
-    background-color: #fff;
-    color: #000;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    line-height: 1.42857143;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 .profile img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+#creators h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+.profile-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 500px;
+    padding: 10px 0;
 }
