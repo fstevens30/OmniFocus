@@ -7,10 +7,7 @@ body {
     color: white;
     font-family: "Quicksand", sans-serif;
     line-height: 1.42857143;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    text-align: center;
 }
 #header h1, h2 {
     font-family: "Quicksand", sans-serif;
@@ -42,7 +39,7 @@ body {
 
 }
 #creators {
-    padding-top: 30px;
+    padding-top: 15px;
 }
 #creators h2 {
     font-size: 1.5em;
@@ -58,9 +55,11 @@ body {
     padding-bottom: 40px;
 }
 .profile-box {
+    margin: 0 auto;
+    width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 0;
 }
@@ -74,4 +73,84 @@ body {
     background-color: #118d8f;
     border: 1px solid white;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 320px) {
+    #header h1, h2 {
+        font-size: 40px;
+    }
+    #header h2 {
+        padding-bottom: 25px;
+    }
+    #about {
+        text-align: center;
+        margin: 0 15px;
+    }
+    .profile-box {
+        flex-wrap: wrap;
+        width: 75%;
+    }
+    .profile {
+        padding-bottom: 0;
+    }
+    #register-btn {
+        padding-bottom: 30px;
+    }
+    #register-btn a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header h1, h2 {
+        font-size: 50px;
+    }
+    #about {
+        text-align: center;
+        margin: 0 15px;
+    }
+    .profile-box {
+        flex-wrap: wrap;
+        width: 70%;
+    }
+    .profile {
+        padding-bottom: 0;
+    }
+    #register-btn {
+        padding-bottom: 30px;
+    }
+    #register-btn a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header h1, h2 {
+        font-size: 60px;
+    }
+    #about {
+        margin: 0 15px;
+    }
+    .profile-box {
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    .profile {
+        padding-bottom: 0;
+    }
+    #register-btn {
+        padding-bottom: 30px;
+    }
+    #register-btn a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #register-btn {
+        padding-bottom: 50px;
+    }
 }
