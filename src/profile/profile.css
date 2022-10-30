@@ -1,10 +1,48 @@
-#profile-box {
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
 }
-
-.profile ul {
-    list-style: none;
-    text-decoration: none;
-    line-height: 1;
-    padding: 20px 0;
+#profile-box {
+    text-align: left;
+    margin: 60px auto;
+    padding: 10px 0 30px 0;
+    width: 25%;
+    line-height: 0;
+    background-color: #292B31;
+    border-radius: 25px;
+    box-shadow: black 1px 1px 5px;
+}
+.profile ul p {
+    font-size: 22px;
+    font-weight: bold;
+}
+.profile ul input {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.profile-btn {
+    padding-top: 150px;
+    text-align: center;
+}
+.profile-btn button {
+    background-color: #00FFF0;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 50px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
