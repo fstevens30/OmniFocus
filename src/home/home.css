@@ -74,7 +74,12 @@ body {
     border: 1px solid white;
     border-radius: 15px;
 }
-
+#register-btn a:hover {
+    background-color: #139ea0;
+    color: white;
+    border: 1px solid white;
+    transition: 0.2s
+}
 @media screen and (max-width: 320px) {
     #header h1, h2 {
         font-size: 40px;
