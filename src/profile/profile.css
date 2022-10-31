@@ -16,7 +16,7 @@ body {
     line-height: 0;
     background-color: #292B31;
     border-radius: 25px;
-    box-shadow: black 1px 1px 5px;
+    box-shadow: black 0.5px 0.5px 4px;
 }
 .profile ul p {
     font-size: 22px;
