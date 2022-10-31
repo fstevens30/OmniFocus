@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background-blend-mode: normal;
     background-attachment: fixed;
     color: white;
     font-family: "Quicksand", sans-serif;
