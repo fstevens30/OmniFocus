@@ -68,13 +68,13 @@ body {
     padding: 15px 30px;
     text-decoration: none;
     font-size: 1.5em;
-    color: white;
-    background-color: #118d8f;
-    border: 1px solid white;
+    color: black;
+    background-color: #00d8ca;
+    border: none;
     border-radius: 15px;
 }
 #register-btn a:hover {
-    background-color: #15B4B8;
+    background-color: #139fa1;
     color: white;
     border: 1px solid white;
     transition: 0.2s

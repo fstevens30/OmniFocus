@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background-blend-mode: normal;
+    background-attachment: fixed;
+    font-family: "Quicksand", sans-serif;
+}
+.form-box {
+    width: 380px;
+    height: 550px;
+    position: relative;
+    margin: 6% auto;
+    background: #292B31;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: black 1px 1px 5px;
+}
+.button-box {
+    width: 220px;
+    margin: 30px auto;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 0 20px 9px #116466;
+    border-radius: 20px;
+}
+.switch-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #116466, #15B4B8);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    outline: none;
+    color: white;
+}
+.submit-btn {
+    width: 85%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #00d8ca;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #139fa1;
+    transition: 0.2s
+}
+.submit-btn1 {
+    width: 85%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 45px;
+    background-color: #00d8ca;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.submit-btn1:hover {
+    background-color: #139fa1;
+    transition: 0.2s
+}
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login {
+    left: 50px;
+}
+#sign_up {
+    left: 450px;
+}
+.icons {
+    margin: 30px auto;
+    text-align: center;
+}
+.icons a {
+    margin: 0 12px;
+    cursor: pointer;
+    color: white;
+    padding-bottom: 10px;
+}
+.icons i {
+    font-size: 25px;
+}
+.icons p {
+    color: white;
+    font-size: 15px;
+    padding-bottom: 10px;
+}

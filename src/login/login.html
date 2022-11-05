@@ -7,19 +7,62 @@
         <title>OmniFocus | Sign in</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="login.css">
-        <link rel="stylesheet" href="/src/style.css">
     </head>
 
     <body>
-        <div id="login-box">
-            <div class="Login">
-                <h1>Login</h1>
+        <div class="box">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="switch-btn" onclick="login()" >Log in</button>
+                    <button type="button" class="switch-btn" onclick="sign_up()" >Sign up</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="email" class="input-field" placeholder="Enter your email" required>
+                    <input type="text" class="input-field" placeholder="Enter your Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log in</button>
+                </form>
+                <form id="sign_up" class="input-group">
+                    <input type="text" class="input-field" placeholder="Name" required>
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="text" class="input-field" placeholder="Confirm Password" required>
+                    <button type="submit" class="submit-btn1">Sign up</button>
+                </form>
+                <div class="icons">
+                    <p>Log in with:</p>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-facebook-official"></i></a>
+                </div>
             </div>
-            <div class="Sign-up">
-                <h1>Sign Up</h1>
         </div>
-        
+
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("sign_up");
+            var z = document.getElementById("btn");
+
+            function sign_up() {
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function login() {
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+
+        </script>
+
         <script src="/src/index.js" async defer></script>
     </body>
 </html>
