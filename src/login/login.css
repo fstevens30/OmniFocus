@@ -26,6 +26,11 @@ body {
     position: relative;
     display: flex;
 }
+.switch-btn:hover {
+    background: rgb(170, 170, 170);
+    transition: .2s;
+    border: none;
+}
 .switch-btn {
     padding: 10px 30px;
     cursor: pointer;
@@ -35,7 +40,7 @@ body {
     font-size: 16px;
 }
 .input-group {
-    top: 180px;
+    top: 170px;
     position: absolute;
     width: 280px;
     transition: .5s;
