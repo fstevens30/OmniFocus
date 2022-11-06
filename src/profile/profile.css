@@ -10,8 +10,8 @@ body {
 }
 #profile-box {
     text-align: left;
-    margin: 20px auto;
-    margin-top: 60px;
+    margin: 5% auto;
+    margin-top: 45px;
     padding: 10px 0 30px 0;
     width: 25%;
     line-height: 0;
@@ -51,12 +51,11 @@ body {
     width: 100%;
     background-color: #222222;
     padding: 20px 0;
+    text-align: right;
 }
 .banner-content a {
     margin-right: 5%;
     color: white;
-    display: flex;
-    justify-content: flex-end;
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;

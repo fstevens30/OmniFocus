@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background-blend-mode: normal;
+    background-attachment: fixed;
+}
+.box {
+    width: 580px;
+    height: 550px;
+    margin: 5% auto;
+    background: #292B31;
+}
+.banner-content {
+    width: 100%;
+    background-color: #222222;
+    padding: 20px 0;
+    text-align: right;
+}
+.banner-content a {
+    margin-right: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
