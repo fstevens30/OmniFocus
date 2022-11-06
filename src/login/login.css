@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Quicksand", sans-serif;
 }
 body {
     width: 100%;
@@ -8,7 +9,6 @@ body {
     background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
     background-blend-mode: normal;
     background-attachment: fixed;
-    font-family: "Quicksand", sans-serif;
 }
 .form-box {
     width: 380px;
@@ -16,36 +16,31 @@ body {
     position: relative;
     margin: 6% auto;
     background: #292B31;
-    padding: 5px;
     overflow: hidden;
     box-shadow: black 1px 1px 5px;
+    border-radius: 20px;
 }
 .button-box {
-    width: 220px;
-    margin: 30px auto;
+    width: 100%;
     margin-bottom: 40px;
     position: relative;
-    box-shadow: 0 0 20px 9px #116466;
-    border-radius: 20px;
+    display: flex;
 }
 .switch-btn {
     padding: 10px 30px;
     cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    color: white;
+    width: 50%;
+    height: 45px;
+    font-weight: bolder;
+    font-size: 16px;
 }
-#btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 110px;
-    height: 100%;
-    background: linear-gradient(to right, #116466, #15B4B8);
-    border-radius: 30px;
-    transition: .5s;
+.switch-btn2 {
+    padding: 10px 30px;
+    cursor: pointer;
+    width: 50%;
+    height: 45px;
+    font-weight: bolder;
+    font-size: 16px;
 }
 .input-group {
     top: 180px;
@@ -64,6 +59,13 @@ body {
     background: transparent;
     outline: none;
     color: white;
+}
+.input-field:focus {
+    border-bottom: 1px solid #00d8ca;
+    transition: 0.3s;
+}
+.input-field::placeholder {
+    color: #9e9e9e;
 }
 .submit-btn {
     width: 85%;
@@ -103,7 +105,7 @@ body {
     margin: 30px 10px 30px 0;
 }
 span {
-    color: #777;
+    color: white;
     font-size: 12px;
     bottom: 68px;
     position: absolute;
