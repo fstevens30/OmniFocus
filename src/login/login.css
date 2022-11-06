@@ -34,14 +34,6 @@ body {
     font-weight: bolder;
     font-size: 16px;
 }
-.switch-btn2 {
-    padding: 10px 30px;
-    cursor: pointer;
-    width: 50%;
-    height: 45px;
-    font-weight: bolder;
-    font-size: 16px;
-}
 .input-group {
     top: 180px;
     position: absolute;
@@ -90,7 +82,7 @@ body {
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 30px;
     background-color: #00d8ca;
     border: 0;
     outline: none;
@@ -107,7 +99,7 @@ body {
 span {
     color: white;
     font-size: 12px;
-    bottom: 68px;
+    bottom: 120px;
     position: absolute;
 }
 #login {
@@ -117,14 +109,13 @@ span {
     left: 450px;
 }
 .icons {
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: center;
 }
 .icons a {
     margin: 0 12px;
     cursor: pointer;
     color: white;
-    padding-bottom: 10px;
 }
 .icons i {
     font-size: 25px;
@@ -133,4 +124,24 @@ span {
     color: white;
     font-size: 15px;
     padding-bottom: 10px;
+}
+.link-login {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+.link-login a {
+    color: #00d8ca;
+    margin-left: 5px;
+}
+.link-signup {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+.link-signup a {
+    color: #00d8ca;
+    margin-left: 5px;
 }
