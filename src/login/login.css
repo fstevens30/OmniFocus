@@ -116,19 +116,19 @@ span {
 #sign_up {
     left: 450px;
 }
-.icons-login {
+.icons {
     margin: 20px auto;
     text-align: center;
 }
-.icons-login a {
+.icons a {
     margin: 0 12px;
     cursor: pointer;
     color: rgb(255, 255, 255);
 }
-.icons-login i {
+.icons i {
     font-size: 25px;
 }
-.icons-login p {
+.icons p {
     color: rgb(255, 255, 255);
     font-size: 15px;
     padding-bottom: 10px;
