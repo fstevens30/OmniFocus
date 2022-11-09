@@ -45,8 +45,8 @@ function sign_up(first = false) {
     z.style.left = "110px";
     
     // Copy over any values from the login form to the sign up form
-    // document.getElementById("sign-up-em").value = document.getElementById("login-em").value;
-    // document.getElementById("sign-up-pw").value = document.getElementById("login-pw").value;
+    document.getElementById("sign-up-em").value = document.getElementById("login-em").value;
+    document.getElementById("sign-up-pw").value = document.getElementById("login-pw").value;
 
     if (first) {
         x.style.transition = "0s";
@@ -76,8 +76,8 @@ function login(first = false) {
     z.style.left = "0px";
 
     // Copy over any values from the sign up form to the login form
-    // document.getElementById("login-em").value = document.getElementById("sign-up-em").value;
-    // document.getElementById("login-pw").value = document.getElementById("sign-up-pw").value;
+    document.getElementById("login-em").value = document.getElementById("sign-up-em").value;
+    document.getElementById("login-pw").value = document.getElementById("sign-up-pw").value;
 
     if (first) {
         x.style.transition = "0s";
