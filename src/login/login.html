@@ -23,27 +23,33 @@
                     <button type="button" class="switch-btn" onclick="login()" >Log in</button>
                     <button type="button" class="switch-btn" onclick="sign_up()" >Sign up</button>
                 </div>
-                <form id="login" class="input-group" action="javascript:try_login()">
-                    <input id="login-em" type="email" class="input-field" placeholder="Enter your email" required>
-                    <input id="login-pw"type="password" class="input-field" placeholder="Enter your Password" required>
-                    <input id="login-rp" type="checkbox" class="check-box"><span>Remember Password</span>
+                <form id="login" class="input-group">
+                    <div class="icons-login">
+                        <p>Log in with:</p>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                    </div>
+                    <input type="email" class="input-field" placeholder="Enter your email" required>
+                    <input type="password" class="input-field" placeholder="Enter your Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
                     <p class="link-signup">Dont have an account?<a href="#" onclick="sign_up()">Sign up</a></p>
                 </form>
-                <form id="sign_up" class="input-group" action="javascript:try_sign_up()">
-                    <input id="sign-up-nm" type="text" class="input-field" placeholder="Name" required>
-                    <input id="sign-up-em" type="email" class="input-field" placeholder="Email" required>
-                    <input id="sign-up-pw" type="password" class="input-field" placeholder="Password" required>
-                    <input id="sign-up-cpw" type="password" class="input-field" placeholder="Confirm Password" required>
+                <form id="sign_up" class="input-group">
+                    <div class="icons-sign-up">
+                        <p>Sign in with:</p>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                    </div>
+                    <input type="text" class="input-field" placeholder="Name" required>
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="password" class="input-field" placeholder="Confirm Password" required>
                     <button type="submit" class="submit-btn1">Sign up</button>
                     <p class="link-login">Already have an account?<a href="#" onclick="login()">Log in.</a></p>
                 </form>
-                <div class="icons">
-                    <p>Log in with:</p>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                    <a href="#"><i class="fa fa-google"></i></a>
-                    <a href="#"><i class="fa fa-facebook-official"></i></a>
-                </div>
             </div>
         </div>
         <script src="/src/index.js" async defer></script>
