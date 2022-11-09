@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="login.css">
+        <script src="/src/login/login.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -22,18 +23,18 @@
                     <button type="button" class="switch-btn" onclick="login()" >Log in</button>
                     <button type="button" class="switch-btn" onclick="sign_up()" >Sign up</button>
                 </div>
-                <form id="login" class="input-group">
-                    <input type="email" class="input-field" placeholder="Enter your email" required>
-                    <input type="password" class="input-field" placeholder="Enter your Password" required>
-                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <form id="login" class="input-group" action="javascript:try_login()">
+                    <input id="login-em" type="email" class="input-field" placeholder="Enter your email" required>
+                    <input id="login-pw"type="password" class="input-field" placeholder="Enter your Password" required>
+                    <input id="login-rp" type="checkbox" class="check-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
                     <p class="link-signup">Dont have an account?<a href="#" onclick="sign_up()">Sign up</a></p>
                 </form>
-                <form id="sign_up" class="input-group">
-                    <input type="text" class="input-field" placeholder="Name" required>
-                    <input type="email" class="input-field" placeholder="Email" required>
-                    <input type="password" class="input-field" placeholder="Password" required>
-                    <input type="password" class="input-field" placeholder="Confirm Password" required>
+                <form id="sign_up" class="input-group" action="javascript:try_sign_up()">
+                    <input id="sign-up-nm" type="text" class="input-field" placeholder="Name" required>
+                    <input id="sign-up-em" type="email" class="input-field" placeholder="Email" required>
+                    <input id="sign-up-pw" type="password" class="input-field" placeholder="Password" required>
+                    <input id="sign-up-cpw" type="password" class="input-field" placeholder="Confirm Password" required>
                     <button type="submit" class="submit-btn1">Sign up</button>
                     <p class="link-login">Already have an account?<a href="#" onclick="login()">Log in.</a></p>
                 </form>
@@ -45,26 +46,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("sign_up");
-            var z = document.getElementById("btn");
-
-            function sign_up() {
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-            function login() {
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0px";
-            }
-
-
-        </script>
-
         <script src="/src/index.js" async defer></script>
     </body>
 </html>
