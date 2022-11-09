@@ -25,6 +25,8 @@ body {
     margin: 25px 10px
 }
 .profile ul p {
+    padding-left: 15px;
+    padding-bottom: 5px;
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -39,7 +41,7 @@ body {
     margin-bottom: 30px;
 }
 .profile-btn {
-    padding-top: 80px;
+    padding-top: 30px;
     text-align: center;
 }
 .profile-btn button {
