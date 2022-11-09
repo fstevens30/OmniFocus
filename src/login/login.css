@@ -40,7 +40,7 @@ body {
     font-size: 16px;
 }
 .input-group {
-    top: 170px;
+    top: 70px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -113,19 +113,19 @@ span {
 #sign_up {
     left: 450px;
 }
-.icons {
+.icons-login {
     margin: 20px auto;
     text-align: center;
 }
-.icons a {
+.icons-login a {
     margin: 0 12px;
     cursor: pointer;
     color: rgb(255, 255, 255);
 }
-.icons i {
+.icons-login i {
     font-size: 25px;
 }
-.icons p {
+.icons-login p {
     color: rgb(255, 255, 255);
     font-size: 15px;
     padding-bottom: 10px;
