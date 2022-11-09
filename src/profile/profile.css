@@ -22,8 +22,11 @@ body {
 }
 .profile ul {
     list-style: none;
+    margin: 25px 10px
 }
 .profile ul p {
+    padding-left: 15px;
+    padding-bottom: 5px;
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -38,19 +41,22 @@ body {
     margin-bottom: 30px;
 }
 .profile-btn {
-    padding-top: 80px;
+    padding-top: 30px;
     text-align: center;
 }
 .profile-btn button {
-    background-color: #00FFF0;
+    background-color: #00d8ca;
     border: none;
     border-radius: 20px;
     color: black;
     padding: 10px 50px;
-    font-weight: bold;
     font-size: 16px;
     margin-bottom: 20px;
     cursor: pointer;
+}
+.profile-btn button:hover {
+    background-color: #139fa1;
+    transition: 0.2s
 }
 .banner-content {
     width: 100%;
