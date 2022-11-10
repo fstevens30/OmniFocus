@@ -106,23 +106,51 @@ function try_login() {
     console.log("email: " + email);
     console.log("pw: " + pw);
 
-    // Check if the email exists
-    // Check if the hash of the password matches the hash in the database
-    // Redirect to dashboard using the account
+    auth.signInWithEmailAndPassword(email, pw).then((userCredential) => {
+        // Success
+        console.log("success, logged in as " + userCredential.user.email);
+    }).catch((error) => {
+        // Error
+        console.log(error);
+    });
 }
 
 function try_sign_up() {
-    // Get date ten years from now (for cookie expiry)
-    var now = new Date();
-    var expires = new Date(now.getTime() + 3153600000000);
+    var name = document.getElementById("sign-up-nm").value;
+    var email = document.getElementById("sign-up-em").value;
+    var password = document.getElementById("sign-up-pw").value;
+    var password_confirm = document.getElementById("sign-up-cpw").value;
 
-    document.cookie = "account=new; expires=" + expires.toUTCString() + "; path=/";
-
-    // Get the details from the form
-    // Check if the email has been taken
     // Check if the passwords match
-    // Add user to database (with hashed password)
-    // Redirect to dashboard using the account
+    if (password != password_confirm) {
+        console.log("passwords don't match");
+        return;
+    }
+
+    auth.createUserWithEmailAndPassword(email, password).then((userCredential) => {
+        // Success
+        console.log("success, signed up as " + userCredential.user.email);
+    
+        // Get date ten years from now (for cookie expiry)
+        var now = new Date();
+        var expires = new Date(now.getTime() + 3153600000000);
+
+        document.cookie = "account=new; expires=" + expires.toUTCString() + "; path=/";
+
+        // Set the username of the user
+        userCredential.user.updateProfile({
+            displayName: name
+        }).then(() => {
+            // Update successful
+            console.log("updated username to " + name);
+        }).catch((error) => {
+            // An error occurred
+            console.log(error);
+        });
+    }).catch((error) => {
+        // Error
+        console.log(error);
+    });
 }
 
 window.onload = function() {
