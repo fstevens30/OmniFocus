@@ -154,14 +154,6 @@ function try_sign_up() {
 }
 
 window.onload = function() {
-    console.log('onload');
-    
-    // Check session
-    if (sessionStorage.getItem('account')) {
-        window.location.href = '/dash/dash.html';
-        return
-    }
-
     // Check cookie for whether the user has an account
     if (document.cookie.includes('account')) {
         // Show login page
@@ -172,3 +164,25 @@ window.onload = function() {
         sign_up(true)
     }
 }
+
+// Run when the auth state changes
+auth.onAuthStateChanged((user) => {
+    // Log out any users who choose to log out
+    if (window.location.hash == "#log-out" && user) {
+        // Log out
+        auth.signOut().then(() => {
+            // Sign-out successful
+            console.log("logged out");
+            // Redirect to login page
+            window.location.hash = "";
+        }).catch((error) => {
+            // An error happened
+            console.log(error);
+        });
+    }
+    // Redirect any logged in users to the dashboard
+    else if (user) {
+        // Redirect to dashboard
+        window.location.href = "/src/dashboard/dash.html";
+    }
+});
