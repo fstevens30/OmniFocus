@@ -6,14 +6,14 @@
 body {
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background: rgb(180, 180, 180);
     background-blend-mode: normal;
     background-attachment: fixed;
 }
 .box {
-    width: 580px;
+    width: 650px;
     height: 550px;
-    margin: 5% auto;
+    margin: 4% auto;
     background: #292B31;
 }
 .banner-content {
@@ -28,4 +28,48 @@ body {
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+}
+.box-banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+.box-banner h1 {
+    color: white;
+    font-size: 14px;
+}
+#add-task {
+    padding: 5px 15px;
+    background-color:rgb(82, 82, 82);
+    border: none;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    cursor: pointer;
+}
+.progress {
+    margin: 0 50px;
+}
+.progress-box {
+    display: flex;
+    justify-content: space-between;
+}
+.progress-box h1 {
+    color: white;
+    font-size: 14px;
+}
+.progress-box h2 {
+    color: white;
+    font-size: 14px;
+    text-align: right;
+}
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color:rgb(82, 82, 82);
+    border-radius: 20px;
+    margin: 5px 0;
+}
+.task-box {
+    margin: 0 50px;
 }
