@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: rgb(180, 180, 180);
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
     background-blend-mode: normal;
     background-attachment: fixed;
 }
@@ -34,20 +34,25 @@ body {
 .box-banner {
     display: flex;
     justify-content: space-between;
-    padding: 15px 25px;
+    padding: 20px 25px;
 }
 .box-banner h1 {
-    color: white;
+    color: rgb(170, 170, 170);
     font-size: 14px;
 }
 #add-task {
     padding: 5px 15px;
-    background-color:rgb(82, 82, 82);
+    background-color:#00d8ca;
     border: none;
     border-radius: 20px;
-    color: rgb(255, 255, 255);
+    color: black;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
+}
+#add-task:hover {
+    background-color: #139fa1;
+    transition: 0.2s;
 }
 .progress {
     margin: 0 40px;
@@ -57,8 +62,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.fa-bars {
+    color: rgb(170, 170, 170);
+    padding-right: 10px;
+}
 .progress-box h1 {
-    color: white;
+    color: rgb(170, 170, 170);
     font-size: 14px;
 }
 .progress-box h2 {
@@ -73,17 +82,24 @@ body {
     border-radius: 20px;
     margin: 5px 0;
 }
+.progress-bar-fill  {
+    width: 40%;
+    height: 100%;
+    background-color: #ec9f3a;
+    border-radius: 20px;
+}
 .task {
     margin: 0 40px;
+    margin-bottom: 15px;
     height: 140px;
-    background-color:rgb(82, 82, 82);
+    background-color:#363941;
     border-radius: 5px;
+    box-shadow: black 1px 1px 5px;
 }
 .task-box {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-
 }
 .task-box h1 {
     color: white;
@@ -92,7 +108,7 @@ body {
 .task-box h2 {
     color: white;
     font-size: 12px;
-    background-color:rgb(39, 39, 39);
+    background-color:#4c505c;
     padding: 5px 15px;
     border-radius: 10px
 }
@@ -107,7 +123,7 @@ body {
     width: 100%;
     height: 75px;
     border: none;
-    background-color:rgb(82, 82, 82);
+    background-color:#363941;
     color: white;
     font-size: 14px;
 }
