@@ -10,6 +10,10 @@ body {
     background-blend-mode: normal;
     background-attachment: fixed;
 }
+
+
+/* default scrollbar */
+
 ::-webkit-scrollbar {
     width: 9px;
     background: transparent
@@ -37,6 +41,49 @@ body {
 .box::-webkit-scrollbar-track-piece:end {
     margin: 15px;
 }
+
+/* banner */
+
+.banner {
+    width: 100%;
+    background-color: #222222;
+    padding: 20px 0;
+}
+.banner-text h1 {
+    margin-left: 3%;
+    font-size: 26px;
+    color: white;
+}
+.banner-logout a {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-right: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+}
+@keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+}
+
+/* To-do list */
+
 .box {
     width: 650px;
     height: 700px;
@@ -45,19 +92,6 @@ body {
     border-radius: 20px;
     box-shadow: black 1px 1px 5px;
     overflow-y: scroll;
-}
-.banner-content {
-    width: 100%;
-    background-color: #222222;
-    padding: 20px 0;
-    text-align: right;
-}
-.banner-content a {
-    margin-right: 5%;
-    color: white;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: bold;
 }
 .box-banner {
     display: flex;
@@ -113,7 +147,7 @@ body {
 .progress-bar-fill  {
     width: 40%;
     height: 100%;
-    background-color: #ec9f3a;
+    background-color: #FFA048;
     border-radius: 20px;
     transition: 0.3s;
 }
