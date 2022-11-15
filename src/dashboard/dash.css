@@ -10,6 +10,33 @@ body {
     background-blend-mode: normal;
     background-attachment: fixed;
 }
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent
+}
+::-webkit-scrollbar-track {
+    background: #292B31;
+}
+.task-text textarea::-webkit-scrollbar-track {
+    background: #292B31;
+    border-radius: 20px;
+}
+.box::-webkit-scrollbar-track {
+    background: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.box::-webkit-scrollbar-track-piece:start {
+    margin: 15px;
+}
+.box::-webkit-scrollbar-track-piece:end {
+    margin: 15px;
+}
 .box {
     width: 650px;
     height: 700px;
@@ -17,6 +44,7 @@ body {
     background: #292B31;
     border-radius: 20px;
     box-shadow: black 1px 1px 5px;
+    overflow-y: scroll;
 }
 .banner-content {
     width: 100%;

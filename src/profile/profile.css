@@ -11,7 +11,21 @@ body {
     font-family: "Quicksand", sans-serif;
     text-align: center;
 }
-#profile-box {
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent
+}
+::-webkit-scrollbar-track {
+    background: #292B31;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.profile-box {
     width: 380px;
     height: 450px;
     margin: 5% auto;
