@@ -102,18 +102,24 @@ body {
     color: rgb(170, 170, 170);
     font-size: 14px;
 }
+.box-banner h2 {
+    color: white;
+    font-size: 14px;
+}
 #add-task {
-    padding: 5px 15px;
-    background-color:#00d8ca;
+    margin-right: 5px;
+    padding: 0 7px;
+    background-color:#4c505c;
     border: none;
     border-radius: 20px;
-    color: black;
-    font-size: 14px;
+    color: rgb(170, 170, 170);
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
 #add-task:hover {
     background-color: #139fa1;
+    color: black;
     transition: 0.2s;
 }
 .progress {
