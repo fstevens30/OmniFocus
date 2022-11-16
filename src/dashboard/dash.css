@@ -49,15 +49,19 @@ body {
     background-color: #212121;
     padding: 20px 0;
 }
-.banner-links a {
+.banner-logout a {
     position: absolute;
     right: 20px;
     top: 20px;
-    margin-right: 5%;
+    margin-right: 4%;
     color: white;
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+}
+.banner-logout a:hover {
+    color: #139fa1;
+    transition: 0.2s;
 }
 .banner-links h1 {
     position: absolute;
@@ -69,16 +73,19 @@ body {
 }
 .banner-links ul {
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     list-style: none;
     text-align: center;
 }
 .banner-links ul li {
     display: inline-block;
     padding: 0 50px;
-    cursor: pointer;
 }
-.banner-links ul li:hover {
+.banner-links a {
+    color: white;
+    text-decoration: none;
+}
+.banner-links a:hover {
     color: #139fa1;
     transition: 0.2s;
 }
