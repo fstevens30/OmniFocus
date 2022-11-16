@@ -56,6 +56,7 @@ body {
 }
 #input-box:focus {
     outline: none;
+    border: #139fa1 2px solid;
 }
 .profile-btn {
     padding-top: 30px;

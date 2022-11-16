@@ -72,7 +72,6 @@ body {
     color: white;
 }
 .banner-links ul {
-    color: white;
     font-size: 26px;
     list-style: none;
     text-align: center;
@@ -82,7 +81,7 @@ body {
     padding: 0 50px;
 }
 .banner-links a {
-    color: white;
+    color: rgb(170, 170, 170);
     text-decoration: none;
 }
 .banner-links a:hover {
@@ -226,5 +225,5 @@ body {
     outline: none;
 }
 .task-text textarea::placeholder {
-    color: rgb(119, 119, 119);
+    color: rgb(124, 124, 124);
 }
