@@ -36,25 +36,20 @@ body {
     background: #555;
 }
 .box::-webkit-scrollbar-track-piece:start {
-    margin: 15px;
+    margin: 4px;
 }
 .box::-webkit-scrollbar-track-piece:end {
-    margin: 15px;
+    margin: 5px;
 }
 
 /* banner */
 
 .banner {
     width: 100%;
-    background-color: #222222;
+    background-color: #212121;
     padding: 20px 0;
 }
-.banner-text h1 {
-    margin-left: 3%;
-    font-size: 26px;
-    color: white;
-}
-.banner-logout a {
+.banner-links a {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -63,6 +58,29 @@ body {
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+}
+.banner-links h1 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    margin-left: 3%;
+    font-size: 26px;
+    color: white;
+}
+.banner-links ul {
+    color: white;
+    font-size: 24px;
+    list-style: none;
+    text-align: center;
+}
+.banner-links ul li {
+    display: inline-block;
+    padding: 0 50px;
+    cursor: pointer;
+}
+.banner-links ul li:hover {
+    color: #139fa1;
+    transition: 0.2s;
 }
 .wave {
     animation-name: wave-animation;
@@ -89,7 +107,7 @@ body {
     height: 700px;
     margin: 4% auto;
     background: #292B31;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: black 1px 1px 5px;
     overflow-y: scroll;
 }
@@ -175,7 +193,7 @@ body {
     font-size: 14px;
 }
 .task-box h2 {
-    color: white;
+    color: rgb(170, 170, 170);
     font-size: 12px;
     background-color:#4c505c;
     padding: 5px 15px;
