@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>OmniFocus | Dashboard</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
-        <script src="https://kit.fontawesome.com/e6546e705e.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="dash.css">
-        <script src="/src/dashboard/dash.js" type="text/javascript"></script>
-        <script src="/src/firebase.js" type="text/javascript"></script>
-    </head>
 
-    <body>
-        <!--BANNER-->
-        <div class="banner">
-            <div class="banner-links">
-                <h1>Welcome back<span id="username"></span><span class="wave">👋</span></h1>
-                <ul> 
-                    <li><a href="/src/home/home.html"><i class="fa fa-house"></i></a></li>
-                    <li><a href="/src/dashboard/dash.html"><i class="fa-regular fa-rectangle-list"></i></a></li>
-                    <li><a href="/src/profile/profile.html"><i class="fa-regular fa-user"></i></a></li>
-                </ul>
-            </div>
-            <div class="banner-logout">
-                <a href="/src/login/login.html#log-out">Log out</a>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OmniFocus | Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://kit.fontawesome.com/e6546e705e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dash.css">
+    <script src="/src/dashboard/dash.js" type="text/javascript"></script>
+    <script src="/src/firebase.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!--BANNER-->
+    <div class="banner">
+        <div class="banner-links">
+            <h1>Welcome back<span id="username"></span><span class="wave">👋</span></h1>
+            <ul>
+                <li><a href="/src/home/home.html"><i class="fa fa-house"></i></a></li>
+                <li><a href="/src/dashboard/dash.html"><i class="fa-regular fa-rectangle-list"></i></a></li>
+                <li><a href="/src/profile/profile.html"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
         </div>
-        <!--TO-DO LIST BOX-->
-        <div class="box">
-            <div class="box-banner">
-                <h1>Tasks (#)</h1>
-                <h2><button type="submit" id="add-task" onclick="newTask()">+</button>Add new task</h2>
-            </div>
+        <div class="banner-logout">
+            <a href="/src/login/login.html#log-out">Log Out</a>
+        </div>
+    </div>
+    <!--TO-DO LIST BOX-->
+    <div class="box">
+        <div class="box-banner">
+            <h1>Tasks (#)</h1>
+            <h2><button type="submit" id="add-task" onclick="newTask()">+</button>Add New Task</h2>
+        </div>
         <!--PROGRESS BAR-->
-            <div class="progress">
-                <div class="progress-box">
-                    <h1><i class="fa fa-bars"></i>Progress</h1>
-                    <h2 id="progress-ratio">0/0</h2>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-bar-fill"></div>
-                </div>
+        <div class="progress">
+            <div class="progress-box">
+                <h1><i class="fa fa-bars"></i>Progress</h1>
+                <h2 id="progress-ratio">0/0</h2>
             </div>
-        <!--TASK LIST-->
-            <div id="task-list">
-                <p id='empty-message'>You have no tasks.<br>Click the 'Add New Task' button to add a task.</p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
             </div>
-
         </div>
-    </body>
+        <!--TASK LIST-->
+        <div id="task-list">
+            <p id='empty-message'>You have no tasks.<br>Click the 'Add New Task' button to add a task.</p>
+        </div>
+
+    </div>
+</body>
+
 </html>
