@@ -41,7 +41,6 @@ function start() {
     }
     // Add the user's name before the wave class
     document.getElementById("username").innerHTML = ", " + auth.currentUser.displayName;
-    document.getElementById("user-name").innerHTML = auth.currentUser.displayName;
     db.collection("tasks").where("user", "==", auth.currentUser.uid).get().then(function(querySnapshot) {
         // Loop through each task in the user's list
         querySnapshot.forEach(function(doc) {
