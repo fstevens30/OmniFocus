@@ -94,11 +94,16 @@ function addTask(id, data) {
     var h1 = document.createElement("h1");
     h1.setAttribute("contenteditable", "true");
     h1.innerHTML = data.title;
+    h1.setAttribute("id", id + "-title");
+    h1.addEventListener("focusout", function() {
+        updateTask(id);
+    });
     taskbox.appendChild(h1);
 
     // Create the task date element and add it to the taskbox element
     var h2 = document.createElement("h2");
     h2.innerHTML = dateParser(data.lastMod);
+    h2.setAttribute("id", id + "-date");
     taskbox.appendChild(h2);
 
     // Create the trash button element and add it to the taskbox element
@@ -118,6 +123,10 @@ function addTask(id, data) {
     var textarea = document.createElement("textarea");
     textarea.placeholder = "Description";
     textarea.innerHTML = data.description;
+    textarea.setAttribute("id", id + "-description");
+    textarea.addEventListener("focusout", function() {
+        updateTask(id);
+    });
     tasktext.appendChild(textarea);
 }
 
@@ -175,4 +184,20 @@ function dateParser(date) {
     // The difference is more than a year, return the difference in years
     message = Math.floor(diff / 31556952);
     return "Last modified " + message + ` year${message == 1 ? "" : "s"} ago`;
+}
+
+function updateTask(id) {
+    // Update the task in the database
+    db.collection("tasks").doc(id).update({
+        title: document.getElementById(id + "-title").innerHTML,
+        description: document.getElementById(id + "-description").value,
+        lastMod: new Date()
+    }).then(function() {
+        console.log("Document successfully updated!");
+    }).catch(function(error) {
+        console.error("Error updating document: ", error);
+    });
+
+    // Update the task date
+    document.getElementById(id + "-date").innerHTML = "Last modified just now";
 }
