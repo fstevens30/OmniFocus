@@ -63,7 +63,8 @@ function newTask() {
         title: "New Task",
         description: "",
         active: true,
-        user: auth.currentUser.uid
+        user: auth.currentUser.uid,
+        lastMod: new Date()
     };
 
     // Create a new task in the database
@@ -97,7 +98,7 @@ function addTask(id, data) {
 
     // Create the task date element and add it to the taskbox element
     var h2 = document.createElement("h2");
-    h2.innerHTML = "Coming Soon";
+    h2.innerHTML = dateParser(data.lastMod);
     taskbox.appendChild(h2);
 
     // Create the trash button element and add it to the taskbox element
@@ -118,4 +119,60 @@ function addTask(id, data) {
     textarea.placeholder = "Description";
     textarea.innerHTML = data.description;
     tasktext.appendChild(textarea);
+}
+
+function dateParser(date) {
+    // Get the current date in seconds
+    var now = new Date().getTime() / 1000;
+    var diff = now - date.seconds;
+    
+    // Will use the highest unit of time possible for the difference
+    // e.g 1 minute ago instead of 100 seconds ago or 3 years ago instead of the days and months
+
+    var message = 0;
+
+    // Check if the difference is none or n/a
+    if (diff == 0 || isNaN(diff)) {
+        return "Last modified just now";
+    }
+
+    // Check if the difference is less than a minute
+    if (diff < 60) {
+        message = Math.floor(diff)
+        return "Last modified " + message + ` second${message == 1 ? "" : "s"} ago`;
+    }
+
+    // Check if the difference is less than an hour
+    if (diff < 3600) {
+        message = Math.floor(diff / 60);
+        return "Last modified " + message + ` minute${message == 1 ? "" : "s"} ago`;
+    }
+
+    // Check if the difference is less than a day
+    if (diff < 86400) {
+        message = Math.floor(diff / 3600);
+        return "Last modified " + message + ` hour${message == 1 ? "" : "s"} ago`;
+    }
+
+    // Check if the difference is less than a week
+    if (diff < 604800) {
+        message = Math.floor(diff / 86400);
+        return "Last modified " + message + ` day${message == 1 ? "" : "s"} ago`;
+    }
+
+    // Check if the difference is less than a month
+    if (diff < 2629746) {
+        message = Math.floor(diff / 604800);
+        return "Last modified " + message + ` week${message == 1 ? "" : "s"} ago`;
+    }
+
+    // Check if the difference is less than a year
+    if (diff < 31556952) {
+        message = Math.floor(diff / 2629746);
+        return "Last modified " + message + ` month${message == 1 ? "" : "s"} ago`;
+    }
+    
+    // The difference is more than a year, return the difference in years
+    message = Math.floor(diff / 31556952);
+    return "Last modified " + message + ` year${message == 1 ? "" : "s"} ago`;
 }
