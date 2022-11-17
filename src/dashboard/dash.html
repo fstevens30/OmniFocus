@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/e6546e705e.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dash.css">
-        <script src="/src/dash/dash.js" type="text/javascript"></script>
+        <script src="/src/dashboard/dash.js" type="text/javascript"></script>
         <script src="/src/firebase.js" type="text/javascript"></script>
     </head>
 
@@ -44,25 +44,17 @@
             <div class="progress">
                 <div class="progress-box">
                     <h1><i class="fa fa-bars"></i>Progress</h1>
-                    <h2>1/4</h2>
+                    <h2 id="progress-ratio">0/0</h2>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-bar-fill"></div>
                 </div>
             </div>
-        <!--TASK BOX-->
-            <div class="task">
-                <div class="task-box">
-                    <h1>Task 1</h1>
-                    <h2>DATE HERE</h2>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </div>
-                <div class="task-text">
-                    <textarea placeholder="[Task description]"></textarea>
-                </div>                
+        <!--TASK LIST-->
+            <div id="task-list">
+
             </div>
+
         </div>
-   
-        <script src="/src/index.js" async defer></script>
     </body>
 </html>

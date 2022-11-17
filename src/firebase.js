@@ -13,3 +13,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
+
+// Run 'start' function when the auth state loads/changes
+auth.onAuthStateChanged(start);
