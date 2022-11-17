@@ -109,6 +109,8 @@ function try_login() {
     auth.signInWithEmailAndPassword(email, pw).then((userCredential) => {
         // Success
         console.log("success, logged in as " + userCredential.user.email);
+        // Redirect to dashboard
+        window.location.href = "/src/dashboard/dash.html";
     }).catch((error) => {
         // Error
         console.log(error);
@@ -143,6 +145,9 @@ function try_sign_up() {
         }).then(() => {
             // Update successful
             console.log("updated username to " + name);
+
+            // Redirect to dashboard
+            window.location.href = "/src/dashboard/dash.html";
         }).catch((error) => {
             // An error occurred
             console.log(error);
@@ -165,10 +170,10 @@ window.onload = function() {
     }
 }
 
-// Run when the auth state changes
-auth.onAuthStateChanged((user) => {
+// Run when the page loads
+function start() {
     // Log out any users who choose to log out
-    if (window.location.hash == "#log-out" && user) {
+    if (window.location.hash == "#log-out" && auth.currentUser) {
         // Log out
         auth.signOut().then(() => {
             // Sign-out successful
@@ -185,4 +190,4 @@ auth.onAuthStateChanged((user) => {
         // Redirect to dashboard
         window.location.href = "/src/dashboard/dash.html";
     }
-});
+};

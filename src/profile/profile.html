@@ -30,16 +30,20 @@
             <div class="profile">
                 <ul>
                     <p>Name:</p>
-                    <input type="text" id="input-box" placeholder="User name">
+                    <input type="text" id="name-input-box" placeholder="User name">
                 <br>
                     <p>Email:</p>
-                    <input type="text" id="input-box" placeholder="User email">
+                    <input type="email" id="email-input-box" placeholder="User email">
                 <br>
-                    <p>Password:</p>
-                    <input type="text" id="input-box" placeholder="User password">
+                    <p>Current Password:</p>
+                    <input type="password" id="current-password-input-box" placeholder="Enter current password">
+                <br>
+                    <p>New Password:</p>
+                    <input type="password" id="new-password-input-box" placeholder="Enter new password">
+                <br>
             </div>
             <div class="profile-btn">
-                <button type="submit">Save</button>
+                <button onclick="updateProfile()">Save</button>
             </div>
         </div>
             

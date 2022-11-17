@@ -35,6 +35,10 @@
 
 // Start by getting the user's list of tasks and adding the user's name to the page
 function start() {
+    // Redirect the user if they are not logged in
+    if (!auth.currentUser) {
+        window.location.href = "../login/login.html";
+    }
     // Add the user's name before the wave class
     document.getElementById("username").innerHTML = ", " + auth.currentUser.displayName;
     document.getElementById("user-name").innerHTML = auth.currentUser.displayName;

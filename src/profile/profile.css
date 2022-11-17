@@ -59,7 +59,7 @@ body {
     border: #139fa1 2px solid;
 }
 .profile-btn {
-    padding-top: 30px;
+    margin-top: -40px;
     text-align: center;
 }
 .profile-btn button {
