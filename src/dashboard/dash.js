@@ -81,14 +81,22 @@ function addTask(id, data) {
     // Create the task element and add it to the task list
     var task = document.createElement("div");
     task.classList.add("task");
+    task.classList.add((data.active ? "active" : "complete"));
     task.setAttribute("id", id);
-    task.setAttribute("data-active", data.active);
     document.getElementById("task-list").appendChild(task);
 
     // Create the taskbox element and add it to the task element
     var taskbox = document.createElement("div");
     taskbox.classList.add("task-box");
     task.appendChild(taskbox);
+
+    // Create the checkbox element and add it to the taskbox element
+    var checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("id", id + "-checkbox");
+    checkbox.setAttribute("onclick", "toggleActive('" + id + "')");
+    checkbox.checked = !data.active;
+    taskbox.appendChild(checkbox);
 
     // Create the task title element and add it to the taskbox element
     var h1 = document.createElement("h1");
@@ -200,4 +208,19 @@ function updateTask(id) {
 
     // Update the task date
     document.getElementById(id + "-date").innerHTML = "Last modified just now";
+}
+
+function toggleActive(id) {
+    // Toggle the active state of the task in the database
+    db.collection("tasks").doc(id).update({
+        active: !document.getElementById(id + "-checkbox").checked
+    }).then(function() {
+        console.log("Document successfully updated!");
+    }).catch(function(error) {
+        console.error("Error updating document: ", error);
+    });
+
+    // Toggle the active state of the task on the dashboard
+    document.getElementById(id).classList.toggle("active");
+    document.getElementById(id).classList.toggle("complete");
 }
