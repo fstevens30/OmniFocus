@@ -13,5 +13,5 @@ jobs:
       - uses: CDNievas/heroku-action@v1.0 # This is the action
         with:
           heroku_email: "tb59391@gmail.com"
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: 39cd1d00-ec56-4e52-b191-aedd4bfb77cf
           heroku_app_name: "omnifocus"
