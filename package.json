@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/alikahwaji/Lab-template/issues"
   },
-  "homepage": "https://github.com/alikahwaji/Lab-template#readme"
+  "homepage": "https://github.com/alikahwaji/Lab-template#readme",
+  "dependencies": {
+    "md5": "^2.3.0"
+  }
 }

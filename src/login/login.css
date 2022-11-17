@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0,0,0,0.9) 100%);
+    background-blend-mode: normal;
+    background-attachment: fixed;
+}
+
+
+/* DEFAULT SCROLLBAR */
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent
+}
+::-webkit-scrollbar-track {
+    background: #292B31;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* FORM BOX */
+.form-box {
+    width: 380px;
+    height: 535px;
+    position: relative;
+    margin: 6% auto;
+    background: #292B31;
+    overflow: hidden;
+    box-shadow: black 1px 1px 5px;
+    border-radius: 20px;
+}
+
+
+/* LOGIN/SIGNUP TAB BUTTONS*/
+.button-box {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+}
+.switch-btn:hover {
+    background: rgb(170, 170, 170);
+    transition: .2s;
+    border: none;
+}
+.switch-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    width: 50%;
+    height: 45px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+
+/* TEXT INPUT FIELDS */
+.input-group {
+    top: 55px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    outline: none;
+    color: white;
+}
+.input-field:focus {
+    border-bottom: 1px solid #00d8ca;
+    transition: 0.3s;
+}
+.input-field::placeholder {
+    color: #9e9e9e;
+}
+
+
+/* SUBMIT BUTTONS */
+.submit-btn {
+    width: 85%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #00d8ca;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #139fa1;
+    transition: 0.2s
+}
+.submit-btn1 {
+    width: 85%;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #00d8ca;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.submit-btn1:hover {
+    background-color: #139fa1;
+    transition: 0.2s
+}
+
+
+/* CHECKBOX AND TAB SWITCH FEATURE */
+#login, #sign_up, #btn {
+    opacity: 0;
+}
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+span {
+    color: white;
+    font-size: 12px;
+    bottom: 120px;
+    position: absolute;
+}
+#login {
+    left: 50px;
+}
+#sign_up {
+    left: 450px;
+}
+
+
+/* SOCIAL LOGIN ICONS */
+.icons {
+    margin: 20px auto;
+    text-align: center;
+}
+.icons a {
+    margin: 0 12px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.icons i {
+    font-size: 25px;
+}
+.icons p {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.fa-facebook-official {
+    color: #4267B2;
+}
+.fa-google {
+    color: #DB4437;
+}
+
+
+/* LOGIN/SIGNUP ACCOUNT LINK */
+.link-login {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+.link-login a {
+    color: #00d8ca;
+    margin-left: 5px;
+}
+.link-signup {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+.link-signup a {
+    color: #00d8ca;
+    margin-left: 5px;
+}

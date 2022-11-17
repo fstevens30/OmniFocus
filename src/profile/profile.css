@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #116466 0%, rgb(0, 0, 0, 0.9) 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+}
+
+
+/* DEFAULT SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent
+}
+
+::-webkit-scrollbar-track {
+    background: #292B31;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* PROFILE BOX */
+
+.profile-box {
+    width: 380px;
+    height: 450px;
+    margin: 5% auto;
+    background: #292B31;
+    overflow: hidden;
+    box-shadow: black 1px 1px 5px;
+    border-radius: 20px;
+}
+
+
+/* PROFILE TEXT BOX */
+
+.profile ul {
+    list-style: none;
+    margin: 25px 10px
+}
+
+.profile ul p {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.profile ul input {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#input-box:focus {
+    outline: none;
+    border: #139fa1 2px solid;
+}
+
+
+/* PROFILE SAVE BUTTON */
+
+.profile-btn {
+    margin-top: -40px;
+    text-align: center;
+}
+
+.profile-btn button {
+    background-color: #00d8ca;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 50px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.profile-btn button:hover {
+    background-color: #139fa1;
+    transition: 0.2s
+}
+
+
+/* BANNER */
+
+.banner-content {
+    width: 100%;
+    background-color: #222222;
+    padding: 20px 0;
+    text-align: right;
+}
+
+.banner-content a {
+    margin-right: 5%;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+/* RESPONSIVE SCALING */
+
+@media screen and (max-width: 320px) {
+    .profile-box {
+        width: 250px;
+    }
+    .banner-content {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-box {
+        width: 300px;
+    }
+    .banner-content {
+        text-align: center;
+    }
+}
