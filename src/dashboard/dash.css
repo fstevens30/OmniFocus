@@ -183,11 +183,10 @@ body {
     margin: 5px 0;
 }
 .progress-bar-fill  {
-    width: 40%;
     height: 100%;
-    background-color: #FFA048;
     border-radius: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    opacity: 0.75;
 }
 
 
@@ -318,4 +317,11 @@ body {
         display: none;
     }
     
+}
+.task.complete {
+    opacity: 0.25;
+}
+.task.complete h1 {
+    text-decoration: line-through;
+    pointer-events: none;
 }
