@@ -29,7 +29,7 @@
                 <button type="button" class="switch-btn" onclick="sign_up()">Sign up</button>
             </div>
             <!--SOCIAL LOGIN ICONS - PLACE HOLDER FOR NOW
-                <form id="login" class="input-group" action="javascript:try_login()">
+               
                     <div class="icons">
                         <p>Log in with:</p>
                         <a href="#"><i class="fa fa-github"></i></a>
@@ -38,11 +38,12 @@
                     </div>
                 -->
             <!--TEXT FIELDS FOR LOGIN TAB-->
-            <input id="login-em" type="email" class="input-field" placeholder="Enter your email" required>
-            <input id="login-pw" type="password" class="input-field" placeholder="Enter your Password" required>
-            <input type="checkbox" class="check-box"><span>Remember Password</span>
-            <button type="submit" class="submit-btn">Log In</button>
-            <p class="link-signup">Don't have an account?<a href="#" onclick="sign_up()">Sign Up</a></p>
+            <form id="login" class="input-group" action="javascript:try_login()">
+                <input id="login-em" type="email" class="input-field" placeholder="Enter your email" required>
+                <input id="login-pw" type="password" class="input-field" placeholder="Enter your Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+                <p class="link-signup">Don't have an account?<a href="#" onclick="sign_up()">Sign Up</a></p>
             </form>
             <!--SOCIAL SIGNUP ICONS-->
             <form id="sign_up" class="input-group" action="javascript:try_sign_up()">
