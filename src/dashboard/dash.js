@@ -33,8 +33,11 @@
 //   2. Update record in user's list
 //   3. Update progress bar
 
-// Start by getting the user's list of tasks
+// Start by getting the user's list of tasks and adding the user's name to the page
 function start() {
+    // Add the user's name before the wave class
+    document.getElementById("username").innerHTML = ", " + auth.currentUser.displayName;
+    document.getElementById("user-name").innerHTML = auth.currentUser.displayName;
     db.collection("tasks").where("user", "==", auth.currentUser.uid).get().then(function(querySnapshot) {
         // Loop through each task in the user's list
         querySnapshot.forEach(function(doc) {
@@ -61,6 +64,11 @@ function trash(id) {
 
     // Update the progress bar
     updateProgress();
+
+    // If there are no tasks left, display the empty message
+    if (document.getElementById("task-list").childElementCount == 0) {
+        document.getElementById("task-list").innerHTML = "<p id='empty-message'>You have no tasks.<br>Click the 'Add New Task' button to add a task.</p>";
+    }
 }
 
 function newTask() {
@@ -86,6 +94,11 @@ function newTask() {
 }
 
 function addTask(id, data) {
+    // Remove the empty message if it exists
+    if (document.getElementById("empty-message")) {
+        document.getElementById("empty-message").remove();
+    }
+
     // Create the task element and add it to the task list
     var task = document.createElement("div");
     task.classList.add("task");
