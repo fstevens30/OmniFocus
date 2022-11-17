@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: 2a72157d-5414-4456-9eb8-2bdbc374cc9b
+          heroku_app_name: "omni-focus" #Must be unique in Heroku
+          heroku_email: "flynn-stevens@live.nmit.ac.nz"
