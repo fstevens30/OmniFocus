@@ -29,7 +29,7 @@ body {
 }
 
 
-/* DEFAULT SCROLLBAR */
+/* FORM BOX */
 .form-box {
     width: 380px;
     height: 535px;
@@ -42,7 +42,7 @@ body {
 }
 
 
-/* DEFAULT SCROLLBAR */
+/* LOGIN/SIGNUP TAB BUTTONS*/
 .button-box {
     width: 100%;
     margin-bottom: 40px;
@@ -64,7 +64,7 @@ body {
 }
 
 
-/* DEFAULT SCROLLBAR */
+/* TEXT INPUT FIELDS */
 .input-group {
     top: 55px;
     position: absolute;
@@ -92,7 +92,7 @@ body {
 }
 
 
-/* DEFAULT SCROLLBAR */
+/* SUBMIT BUTTONS */
 .submit-btn {
     width: 85%;
     padding: 10px 20px;
@@ -127,6 +127,9 @@ body {
     background-color: #139fa1;
     transition: 0.2s
 }
+
+
+/* CHECKBOX AND TAB SWITCH FEATURE */
 #login, #sign_up, #btn {
     opacity: 0;
 }
@@ -145,6 +148,9 @@ span {
 #sign_up {
     left: 450px;
 }
+
+
+/* SOCIAL LOGIN ICONS */
 .icons {
     margin: 20px auto;
     text-align: center;
@@ -168,6 +174,9 @@ span {
 .fa-google {
     color: #DB4437;
 }
+
+
+/* LOGIN/SIGNUP ACCOUNT LINK */
 .link-login {
     font-size: 13px;
     text-align: center;
