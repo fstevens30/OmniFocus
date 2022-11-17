@@ -38,47 +38,8 @@ function start() {
     db.collection("tasks").where("user", "==", auth.currentUser.uid).get().then(function(querySnapshot) {
         // Loop through each task in the user's list
         querySnapshot.forEach(function(doc) {
-            // Create the task element and add it to the task list
-            var task = document.createElement("div");
-            task.classList.add("task");
-            task.setAttribute("id", doc.id);
-            task.setAttribute("data-active", doc.data().active);
-            document.getElementById("task-list").appendChild(task);
-
-            // Create the taskbox element and add it to the task element
-            var taskbox = document.createElement("div");
-            taskbox.classList.add("task-box");
-            task.appendChild(taskbox);
-
-            // Create the task title element and add it to the taskbox element
-            var h1 = document.createElement("h1");
-            h1.setAttribute("contenteditable", "true");
-            h1.innerHTML = doc.data().title;
-            taskbox.appendChild(h1);
-
-            // Create the task date element and add it to the taskbox element
-            var h2 = document.createElement("h2");
-            h2.innerHTML = "Coming Soon";
-            taskbox.appendChild(h2);
-
-            // Create the trash button element and add it to the taskbox element
-            var trashicon = document.createElement("i");
-            trashicon.classList.add("fa");
-            trashicon.classList.add("fa-trash-o");
-            trashicon.setAttribute("aria-hidden", "true");
-            trashicon.setAttribute("onclick", "trash(\"" + doc.id + "\")");
-            taskbox.appendChild(trashicon);
-
-            // Create the task text element and add it to the task element
-            var tasktext = document.createElement("div");
-            tasktext.classList.add("task-text");
-            task.appendChild(tasktext);
-
-            // Create the task description element and add it to the task text element
-            var textarea = document.createElement("textarea");
-            textarea.placeholder = "Description";
-            textarea.innerHTML = doc.data().description;
-            tasktext.appendChild(textarea);
+            // Run the addTask function to add the task to the dashboard page
+            addTask(doc.id, doc.data());
         });
     }).catch(function(error) {
         console.log("Error getting documents: ", error);
@@ -95,4 +56,66 @@ function trash(id) {
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
+}
+
+function newTask() {
+    var task = {
+        title: "New Task",
+        description: "",
+        active: true,
+        user: auth.currentUser.uid
+    };
+
+    // Create a new task in the database
+    db.collection("tasks").add(task).then(function(docRef) {
+        // Success, add the task to the dashboard page
+        addTask(docRef.id, task);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+}
+
+function addTask(id, data) {
+    // Create the task element and add it to the task list
+    var task = document.createElement("div");
+    task.classList.add("task");
+    task.setAttribute("id", id);
+    task.setAttribute("data-active", data.active);
+    document.getElementById("task-list").appendChild(task);
+
+    // Create the taskbox element and add it to the task element
+    var taskbox = document.createElement("div");
+    taskbox.classList.add("task-box");
+    task.appendChild(taskbox);
+
+    // Create the task title element and add it to the taskbox element
+    var h1 = document.createElement("h1");
+    h1.setAttribute("contenteditable", "true");
+    h1.innerHTML = data.title;
+    taskbox.appendChild(h1);
+
+    // Create the task date element and add it to the taskbox element
+    var h2 = document.createElement("h2");
+    h2.innerHTML = "Coming Soon";
+    taskbox.appendChild(h2);
+
+    // Create the trash button element and add it to the taskbox element
+    var trashicon = document.createElement("i");
+    trashicon.classList.add("fa");
+    trashicon.classList.add("fa-trash-o");
+    trashicon.setAttribute("aria-hidden", "true");
+    trashicon.setAttribute("onclick", "trash(\"" + id + "\")");
+    taskbox.appendChild(trashicon);
+
+    // Create the task text element and add it to the task element
+    var tasktext = document.createElement("div");
+    tasktext.classList.add("task-text");
+    task.appendChild(tasktext);
+
+    // Create the task description element and add it to the task text element
+    var textarea = document.createElement("textarea");
+    textarea.placeholder = "Description";
+    textarea.innerHTML = data.description;
+    tasktext.appendChild(textarea);
 }
