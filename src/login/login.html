@@ -20,6 +20,7 @@
     </head>
 
     <body>
+        <!--FORM BOX AND TAB BUTTONS-->
         <div class="box">
             <div class="form-box">
                 <div class="button-box">
@@ -27,6 +28,7 @@
                     <button type="button" class="switch-btn" onclick="login()" >Log in</button>
                     <button type="button" class="switch-btn" onclick="sign_up()" >Sign up</button>
                 </div>
+        <!--SOCIAL LOGIN ICONS-->
                 <form id="login" class="input-group" action="javascript:try_login()">
                     <div class="icons">
                         <p>Log in with:</p>
@@ -34,12 +36,14 @@
                         <a href="#"><i class="fa fa-google"></i></a>
                         <a href="#"><i class="fa fa-facebook-official"></i></a>
                     </div>
+        <!--TEXT FIELDS FOR LOGIN TAB-->
                     <input id="login-em" type="email" class="input-field" placeholder="Enter your email" required>
                     <input id="login-pw" type="password" class="input-field" placeholder="Enter your Password" required>
                     <input type="checkbox" class="check-box"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
                     <p class="link-signup">Dont have an account?<a href="#" onclick="sign_up()">Sign up</a></p>
                 </form>
+        <!--SOCIAL SIGNUP ICONS-->
                 <form id="sign_up" class="input-group" action="javascript:try_sign_up()">
                     <div class="icons">
                         <p>Sign in with:</p>
@@ -47,6 +51,7 @@
                         <a href="#"><i class="fa fa-google"></i></a>
                         <a href="#"><i class="fa fa-facebook-official"></i></a>
                     </div>
+        <!--TEXT FIELDS FOR SIGNUP TAB-->
                     <input id="sign-up-nm" type="text" class="input-field" placeholder="Name" required>
                     <input id="sign-up-em" type="email" class="input-field" placeholder="Email" required>
                     <input id="sign-up-pw" type="password" class="input-field" placeholder="Password" required>

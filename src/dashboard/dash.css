@@ -12,8 +12,7 @@ body {
 }
 
 
-/* default scrollbar */
-
+/* DEFAULT SCROLLBAR */
 ::-webkit-scrollbar {
     width: 9px;
     background: transparent
@@ -42,15 +41,15 @@ body {
     margin: 5px;
 }
 
-/* banner */
 
+/* BANNER */
 .banner {
     width: 100%;
     background-color: #212121;
     padding: 20px 0;
 }
 .banner-logout a {
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
     margin-right: 4%;
@@ -88,6 +87,9 @@ body {
     color: #139fa1;
     transition: 0.2s;
 }
+
+
+/* WAVING EMOJI */
 .wave {
     animation-name: wave-animation;
     animation-duration: 2.5s;        
@@ -106,8 +108,8 @@ body {
     100% { transform: rotate( 0.0deg) }
 }
 
-/* To-do list */
 
+/* TO-DO LIST BOX */
 .box {
     width: 650px;
     height: 700px;
@@ -117,6 +119,9 @@ body {
     box-shadow: black 1px 1px 5px;
     overflow-y: scroll;
 }
+
+
+/* TO-DO LIST BOX HEADER */
 .box-banner {
     display: flex;
     justify-content: space-between;
@@ -146,6 +151,9 @@ body {
     color: black;
     transition: 0.2s;
 }
+
+
+/* PROGRESS BAR AND TEXT */
 .progress {
     margin: 0 40px;
     padding: 10px 0;
@@ -181,6 +189,9 @@ body {
     border-radius: 20px;
     transition: 0.3s;
 }
+
+
+/* TO-DO LIST TASKS */
 .task {
     margin: 0 40px;
     margin-bottom: 15px;
@@ -226,4 +237,85 @@ body {
 }
 .task-text textarea::placeholder {
     color: rgb(124, 124, 124);
+}
+@media screen and (max-width: 320px) {
+    .task {
+        height: 200px;
+    }
+    .task-box h2 {
+        display: none;
+    }
+    .box-banner h1 {
+        font-size: 12px;
+        padding-bottom: 3px;
+    }
+    .box-banner h2 {
+        font-size: 12px;
+    }
+    #add-task {
+        font-size: 16px;
+    }
+    .banner-logout {
+        text-align: center;
+    }
+    .banner-logout a {
+        position: unset;
+        padding: 0;
+        margin: 0;
+    }
+    .banner-links ul{
+        text-align: center;
+        display: block;
+        padding-bottom: 15px;
+    }
+    .box-banner {
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .task {
+        height: 180px;
+        margin: 0 20px;
+    }
+    .progress {
+        margin: 0 20px;
+    }
+    .banner-links ul {
+        font-size: 20px;
+    }
+    .banner-links ul li {
+        padding: 0;
+    }
+    .banner-logout a {
+        font-size: 22px;
+    }
+    .banner-logout {
+        text-align: center;
+    }
+    .banner-logout a {
+        position: unset;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 620px) {
+    .banner-links ul {
+        font-size: 24px;
+    }
+    .banner-links ul li {
+        padding: 0 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .box {
+        width: 85%;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .banner-links h1 {
+        display: none;
+    }
+    
 }
