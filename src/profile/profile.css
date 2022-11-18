@@ -43,7 +43,7 @@ ul {
 
 .profile-box {
     width: 380px;
-    height: 450px;
+    height: 500px;
     margin: 5% auto;
     background: #292B31;
     overflow: hidden;
@@ -74,7 +74,10 @@ ul {
     border: none;
     font-size: 16px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+.profile ul input::placeholder {
+    color: rgb(160, 160, 160);
 }
 
 #input-box:focus {
@@ -86,7 +89,7 @@ ul {
 /* PROFILE SAVE BUTTON */
 
 .profile-btn {
-    margin-top: -40px;
+    margin-top: -10px;
     text-align: center;
 }
 
@@ -107,21 +110,41 @@ ul {
 }
 
 
-/* BANNER */
-
-.banner-content {
+.banner {
     width: 100%;
-    background-color: #222222;
+    background-color: #212121;
     padding: 20px 0;
-    text-align: right;
 }
-
-.banner-content a {
-    margin-right: 5%;
+.banner-logout a {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-right: 4%;
     color: white;
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+}
+.banner-logout a:hover {
+    color: #139fa1;
+    transition: 0.3s;
+}
+.banner-links ul {
+    font-size: 26px;
+    list-style: none;
+    text-align: center;
+}
+.banner-links ul li {
+    display: inline-block;
+    padding: 0 50px;
+}
+.banner-links a {
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+}
+.banner-links a:hover {
+    color: #139fa1;
+    transition: 0.3s;
 }
 
 
@@ -131,7 +154,21 @@ ul {
     .profile-box {
         width: 250px;
     }
-    .banner-content {
+    .banner-logout {
+        text-align: center;
+    }
+    .banner-logout a {
+        position: initial;
+        padding: 0;
+        margin: 0;
+    }
+    .banner-links ul{
+        text-align: center;
+        display: block;
+        padding-bottom: 15px;
+    }
+    .box-banner {
+        display: block;
         text-align: center;
     }
 }
@@ -142,5 +179,30 @@ ul {
     }
     .banner-content {
         text-align: center;
+    }
+    .banner-links ul {
+        font-size: 20px;
+    }
+    .banner-links ul li {
+        padding: 0;
+    }
+    .banner-logout a {
+        font-size: 22px;
+    }
+    .banner-logout {
+        text-align: center;
+    }
+    .banner-logout a {
+        position: initial;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 620px) {
+    .banner-links ul {
+        font-size: 24px;
+    }
+    .banner-links ul li {
+        padding: 0 25px;
     }
 }
