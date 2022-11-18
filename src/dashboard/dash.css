@@ -167,7 +167,7 @@ body {
     padding-right: 10px;
 }
 .progress-box h1 {
-    color: rgb(170, 170, 170);
+    color: rgb(255, 255, 255);
     font-size: 14px;
 }
 .progress-box h2 {
@@ -199,13 +199,16 @@ body {
     border-radius: 5px;
     box-shadow: black 1px 1px 5px;
 }
+.task textarea {
+    color: red;
+}
 .task-box {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
 }
 .task-box h1 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 14px;
 }
 .task-box h2 {
