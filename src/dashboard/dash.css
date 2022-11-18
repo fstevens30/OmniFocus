@@ -49,7 +49,7 @@ body {
     padding: 20px 0;
 }
 .banner-logout a {
-    position: fixed;
+    position: absolute;
     right: 20px;
     top: 20px;
     margin-right: 4%;
@@ -60,7 +60,7 @@ body {
 }
 .banner-logout a:hover {
     color: #139fa1;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .banner-links h1 {
     position: absolute;
@@ -85,7 +85,7 @@ body {
 }
 .banner-links a:hover {
     color: #139fa1;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 
@@ -149,7 +149,7 @@ body {
 #add-task:hover {
     background-color: #139fa1;
     color: black;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 
@@ -293,7 +293,7 @@ body {
         text-align: center;
     }
     .banner-logout a {
-        position: unset;
+        position: initial;
         padding: 0;
         margin: 0;
     }
@@ -324,4 +324,9 @@ body {
 .task.complete h1 {
     text-decoration: line-through;
     pointer-events: none;
+}
+#empty-message {
+    text-align: center;
+    color: rgb(235, 235, 235);
+    padding: 50px;
 }
