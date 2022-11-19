@@ -199,9 +199,6 @@ body {
     border-radius: 5px;
     box-shadow: black 1px 1px 5px;
 }
-.task textarea {
-    color: red;
-}
 .task-box {
     padding: 10px 20px;
     display: flex;
@@ -299,6 +296,12 @@ body {
         position: initial;
         padding: 0;
         margin: 0;
+    }
+    .task h1 {
+        text-align: center;
+    }
+    .task-box h2 {
+        display: none;
     }
 }
 @media screen and (max-width: 620px) {

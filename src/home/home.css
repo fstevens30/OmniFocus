@@ -114,6 +114,7 @@ body {
 @media screen and (max-width: 320px) {
     #header h1, h2 {
         font-size: 35px;
+        line-height: 50px;
     }
     #header h2 {
         padding-bottom: 25px;
@@ -140,7 +141,7 @@ body {
 
 @media screen and (max-width: 480px) {
     #header h1, h2 {
-        font-size: 45px;
+        font-size: 40px;
     }
     #about {
         text-align: center;

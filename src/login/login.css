@@ -197,3 +197,22 @@ span {
     color: #00d8ca;
     margin-left: 5px;
 }
+
+@media screen and (max-width: 480px) {
+    .form-box {
+        margin: 8% auto;
+        width: 280px;
+    }
+    .input-group {
+        width: 180px;
+    }
+    #login {
+        left: -100px;
+    }
+    #sign_up {
+        left: 400px;
+    }
+    .link-signup {
+        margin-left: 10px;
+    }
+}
