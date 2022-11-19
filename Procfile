@@ -1,1 +1,1 @@
-web: npm start
+web: npm run src/home/home.html
