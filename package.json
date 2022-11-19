@@ -2,10 +2,9 @@
     "name": "lab-template",
     "version": "1.0.0",
     "description": "A repo for SDV503 student labs",
-    "main": "index.js",
+    "main": "src/home/home.html",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node src/home/home.html"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
