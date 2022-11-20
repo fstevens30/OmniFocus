@@ -215,6 +215,13 @@ body {
     padding: 5px 15px;
     border-radius: 10px
 }
+.task-box input[type=checkbox] {
+    opacity: 0;
+    transition: 0.3s;
+}
+.task-box:hover input[type=checkbox] {
+    opacity: 1;
+}
 .fa-trash-o {
     color: white;
     cursor: pointer;
