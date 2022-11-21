@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => { // Create a server
     res.statusCode = 200; // OK
     res.setHeader('Content-Type', 'text/html'); // Set the content type
     // Send the response as the index.html file
-    res.end(fs.readFileSync(__dirname + '/src/home/home.html', 'utf8'));
+    res.end(fs.readFileSync(__dirname + '/index.html', 'utf8'));
 });
 
 server.listen(port, hostname, () => { // Listen on port 3000
