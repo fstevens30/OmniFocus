@@ -18,6 +18,12 @@ const server = http.createServer((req, res) => { // Create a server
         res.end();
     }
 
+    req.on('error', (err) => {
+        console.error(err);
+        res.statusCode = 500;
+        res.end();
+    });
+
 });
 
 server.listen(port, hostname, () => { // Listen on port 3000
