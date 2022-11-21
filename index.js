@@ -6,11 +6,12 @@ const port = process.env.PORT || 3000; // process.env.PORT is used by Heroku
 
 const server = http.createServer((req, res) => { // Create a server
     // Send the requested file if it exists
-    var file = fs.readFileSync(__dirname + req.url);
+    var url = __dirname + req.url
 
-    if (file) {
+    if (fs.existsSync(url)) {
         res.statusCode = 200;
-        res.end(file);
+        res.setHeader('Content-Type', url.split('.').pop())
+        res.end(fs.readFileSync(url))
     }
     else {
         res.statusCode = 404;
