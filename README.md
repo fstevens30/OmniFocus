@@ -20,4 +20,4 @@ Welcome to OmniFocus! A lightweight, cross-platform, open-source To-Do list appl
 
 ## Live Demo
 
-Try the application live at [https://omnifocus.herokuapp.com/](https://omnifocus.herokuapp.com/)
+Try the application live at [https://omni-focus.herokuapp.com/](https://omni-focus.herokuapp.com/)
