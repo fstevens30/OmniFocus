@@ -15,7 +15,7 @@
 function start() {
     // Redirect to login page if not logged in
     if (!auth.currentUser) {
-        window.location.href = "../login/login.html";
+        window.location.href = "/login";
     }
 
     // Add account name and email to the page

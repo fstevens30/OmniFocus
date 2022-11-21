@@ -110,7 +110,7 @@ function try_login() {
         // Success
         console.log("success, logged in as " + userCredential.user.email);
         // Redirect to dashboard
-        window.location.href = "/src/dashboard/dash.html";
+        window.location.href = "/dash";
     }).catch((error) => {
         // Error
         console.log(error);
@@ -147,7 +147,7 @@ function try_sign_up() {
             console.log("updated username to " + name);
 
             // Redirect to dashboard
-            window.location.href = "/src/dashboard/dash.html";
+            window.location.href = "/dash";
         }).catch((error) => {
             // An error occurred
             console.log(error);
@@ -188,6 +188,6 @@ function start() {
     // Redirect any logged in users to the dashboard
     else if (user) {
         // Redirect to dashboard
-        window.location.href = "/src/dashboard/dash.html";
+        window.location.href = "/dash";
     }
 };
