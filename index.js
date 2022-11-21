@@ -1,4 +1,5 @@
 const http = require('http'); // Import the http module
+const fs = require('fs'); // Import the fs module
 
 const hostname = '0.0.0.0'; // Define the hostname
 const port = process.env.PORT || 3000; // process.env.PORT is used by Heroku
