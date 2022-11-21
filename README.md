@@ -1,6 +1,6 @@
 # OmniFocus
 
-Welcome to OmniFocus! A lightweight, cross-platform, open-source To-Do list application. This is a project made by NMIT students for an assessment. 
+Welcome to OmniFocus! A lightweight, cross-platform, open-source To-Do list application. This is a project made by NMIT students for an assessment.
 
 ## Made by
 
