@@ -1,29 +1,15 @@
-// Changing the __dirname to the current directory
-__dirname = "https://github.com/fstevens30/OmniFocus.git";
+const http = require('http'); // Import the http module
 
-const express = require('express');
-const app = express();
-const path = require('path');
-const router = express.Router();
+const hostname = '0.0.0.0'; // Define the hostname
+const port = process.env.PORT || 3000; // process.env.PORT is used by Heroku
 
-router.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/src/home/home.html'));
+const server = http.createServer((req, res) => { // Create a server
+    res.statusCode = 200; // OK
+    res.setHeader('Content-Type', 'text/html'); // Set the content type
+    // Send the response as the index.html file
+    res.end(fs.readFileSync(__dirname + '/src/home/home.html', 'utf8'));
 });
 
-router.get('/login', function(req, res) {
-    res.sendFile(path.join(__dirname + '/src/login/login.html'));
+server.listen(port, hostname, () => { // Listen on port 3000
+    console.log(`Server running at http://${hostname}:${port}/`); // Log the server is running
 });
-
-router.get('/dashboard', function(req, res) {
-    res.sendFile(path.join(__dirname + '/src/dashboard/dashboard.html'));
-});
-
-router.get('/profile', function(req, res) {
-    res.sendFile(path.join(__dirname + '/src/profile/profile.html'));
-});
-
-// Add the router
-app.use('/', router);
-app.listen(process.env.port || 3000);
-
-console.log('Running at Port 3000');
