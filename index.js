@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => { // Create a server
         req.url = '/src/home/home.html';
     }
     // Send an html file if a file type is not specified (no dot)
-    else if (!req.url.indexOf('.')) {
+    else if (req.url.indexOf('.') == -1) {
         req.url = '/src' + req.url + req.url + '.html';
     }
 
