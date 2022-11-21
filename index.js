@@ -8,7 +8,11 @@ const server = http.createServer((req, res) => { // Create a server
     res.statusCode = 200; // OK
     res.setHeader('Content-Type', 'text/html'); // Set the content type
     // Send the response as the index.html file
-    res.end(fs.readFileSync(__dirname + '/index.html', 'utf8'));
+    res.send(fs.readFileSync(__dirname + '/src/home/home.html', 'utf8')); // Links to the index.html file
+    // I still need to link the css file
+    // I can do this by using the fs module to read the file and send it as a response
+    res.sendFile(__dirname + '/src/home/home.css'); // Links to the index.css file
+    res.end(); // End the response
 });
 
 server.listen(port, hostname, () => { // Listen on port 3000
