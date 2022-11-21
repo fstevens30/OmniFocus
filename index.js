@@ -10,7 +10,6 @@ const server = http.createServer((req, res) => { // Create a server
 
     if (file) {
         res.statusCode = 200;
-        res.setHeader('Content-Type', file.split('.').pop())
         res.end(file);
     }
     else {
