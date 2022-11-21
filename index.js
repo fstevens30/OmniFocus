@@ -1,13 +1,30 @@
-const http = require('http'); // Import the http module
-const fs = require('fs'); // Import the fs module
+console.log(__dirname);
 
-const hostname = '0.0.0.0'; // Define the hostname
-const port = process.env.PORT || 3000; // process.env.PORT is used by Heroku
 
-const server = http.createServer((req, res) => { // Create a server
-    // Do something 
+
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
+
+router.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/src/home/home.html'));
 });
 
-server.listen(port, hostname, () => { // Listen on port 3000
-    console.log(`Server running at http://${hostname}:${port}/`); // Log the server is running
+router.get('/login', function(req, res) {
+    res.sendFile(path.join(__dirname + '/src/login/login.html'));
 });
+
+router.get('/dashboard', function(req, res) {
+    res.sendFile(path.join(__dirname + '/src/dashboard/dashboard.html'));
+});
+
+router.get('/profile', function(req, res) {
+    res.sendFile(path.join(__dirname + '/src/profile/profile.html'));
+});
+
+// Add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');
