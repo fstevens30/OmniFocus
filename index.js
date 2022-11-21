@@ -1,6 +1,5 @@
-console.log(__dirname);
-
-
+// Changing the __dirname to the current directory
+__dirname = "https://github.com/fstevens30/OmniFocus.git";
 
 const express = require('express');
 const app = express();
