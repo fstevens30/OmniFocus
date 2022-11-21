@@ -6,8 +6,9 @@ const port = process.env.PORT || 3000; // process.env.PORT is used by Heroku
 
 const server = http.createServer((req, res) => { // Create a server
     res.statusCode = 200; // OK
-    // Send the file requested by the user
-    res.end(fs.readFileSync(__dirname + req.url));
+    
+    // Send the response
+    res.end(fs.readFileSync(__dirname + req.url, 'utf8'));
 });
 
 server.listen(port, hostname, () => { // Listen on port 3000
