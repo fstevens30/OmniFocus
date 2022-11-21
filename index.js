@@ -9,6 +9,15 @@ const server = http.createServer((req, res) => { // Create a server
     if (req.url == '/') {
         req.url = '/src/home/home.html';
     }
+    // Send an html file if a file type is not specified (no dot after the last slash)
+    else if (req.url.lastIndexOf('/') < req.url.lastIndexOf('.')) {
+        req.url = '/src' + req.url + req.url + '.html';
+    }
+
+    // Add any hash parameters to the end of the url
+    if (req.url.indexOf('#') > -1) {
+        req.url = req.url.substring(0, req.url.indexOf('#')) + req.url.substring(req.url.indexOf('#'));
+    }
     
     // Send the requested file if it exists
     var url = __dirname + req.url
