@@ -10,7 +10,6 @@ const server = http.createServer((req, res) => { // Create a server
 
     if (fs.existsSync(url)) {
         res.statusCode = 200;
-        res.setHeader('Content-Type', url.split('.').pop())
         res.end(fs.readFileSync(url))
     }
     else {
