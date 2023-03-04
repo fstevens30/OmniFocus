@@ -6,7 +6,7 @@ Welcome to OmniFocus! A lightweight, cross-platform, open-source To-Do list appl
 
 - [Keith Jhaeron Cayatoc](https://github.com/Yugenzariah)
 - [Flynn Stevens](https://github.com/fstevens30)
-- [Tristan Bulmer](https://github.com/Transit-Lumber)
+- [Tristan Bulmer](https://github.com/Hoffee-Toffee)
 - [Jackson Hayes](https://github.com/JacksoonHayes)
 
 ## Technologies Used
